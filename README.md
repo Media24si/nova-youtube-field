@@ -4,7 +4,7 @@ Laravel Nova Youtube field enables to save youtube links/embeds/id DB.
 
 **This field will only save YouTube video ID to DB**. It will try to parse a link to get an ID. If it can't find an ID, it will just save a value.
 
-![screenshot of the nova-youtube-field](https://media24si.github.io/nova-youtube-field/screenshot.png)
+![screenshot of the nova-youtube-field](https://raw.githubusercontent.com/Media24si/nova-youtube-field/master/screenshot.png)
 
 ## Installation
 
