@@ -1,0 +1,30 @@
+{
+    "name": "media24si/nova-youtube-field",
+    "description": "A Laravel Nova Youtube field.",
+    "keywords": [
+        "laravel",
+        "nova",
+        "youtube"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Media24si\\NovaYoutubeField\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Media24si\\NovaYoutubeField\\FieldServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
