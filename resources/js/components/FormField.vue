@@ -1,22 +1,23 @@
 <template>
-    <default-field :field="field">
-        <template slot="field">
-            <input :id="field.name" type="text"
-                class="w-full form-control form-input form-input-bordered"
-                :class="errorClasses"
-                :placeholder="field.name"
-                v-model="value"
+    <DefaultField :errors="errors" :field="field" :show-help-text="showHelpText">
+        <template #field>
+            <input :id="field.name"
+                   v-model="value"
+                   :class="errorClasses"
+                   :placeholder="field.name"
+                   class="w-full form-control form-input form-input-bordered"
+                   type="text"
             />
 
             <p v-if="hasError" class="my-2 text-danger">
                 {{ firstError }}
             </p>
         </template>
-    </default-field>
+    </DefaultField>
 </template>
 
 <script>
-import { FormField, HandlesValidationErrors } from 'laravel-nova'
+import {FormField, HandlesValidationErrors} from 'laravel-nova'
 
 export default {
     mixins: [FormField, HandlesValidationErrors],
@@ -28,22 +29,15 @@ export default {
          * Set the initial, internal value for the field.
          */
         setInitialValue() {
-          this.value = this.field.value || ''
+            this.value = this.field.value || ''
         },
 
         /**
          * Fill the given FormData object with the field's internal value.
          */
         fill(formData) {
-          formData.append(this.field.attribute, this.value || '')
+            formData.append(this.field.attribute, this.value || '')
         },
-
-        /**
-         * Update the field's internal value.
-         */
-        handleChange(value) {
-          this.value = value
-        }
     }
 }
 </script>

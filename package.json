@@ -7,22 +7,14 @@
     "watch-poll": "mix watch -- --watch-options-poll=1000",
     "hot": "mix watch --hot",
     "prod": "npm run production",
-    "production": "mix --production"
+    "production": "mix --production",
+    "nova:install": "npm --prefix='./vendor/laravel/nova' ci"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.2.37",
-    "cross-env": "^7.0.3",
-    "laravel-mix": "^6.0.49",
-    "laravel-nova": "^1.12",
-    "resolve-url-loader": "^5.0.0",
-    "sass": "^1.38.0",
-    "sass-loader": "^12.1.0",
-    "vue-loader": "^16.0.2",
-    "vue-template-compiler": "^2.6.14"
+    "@vue/compiler-sfc": "^3.2.22",
+    "laravel-mix": "^6.0.41",
+    "postcss": "^8.3.11",
+    "vue-loader": "^16.8.3"
   },
-  "dependencies": {
-    "lodash.get": "^4.4.2",
-    "vue": "^3.0",
-    "vue-multiselect": "^3.0.0-alpha.2"
-  }
+  "dependencies": {}
 }

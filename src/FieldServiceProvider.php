@@ -2,22 +2,19 @@
 
 namespace Media24si\NovaYoutubeField;
 
-use Laravel\Nova\Nova;
-use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Nova\Events\ServingNova;
+use Laravel\Nova\Nova;
 
-class FieldServiceProvider extends ServiceProvider
-{
+class FieldServiceProvider extends ServiceProvider {
     /**
      * Bootstrap any application services.
      *
      * @return void
      */
-    public function boot()
-    {
+    public function boot() {
         Nova::serving(function (ServingNova $event) {
-            Nova::script('nova-youtube-field', __DIR__.'/../dist/js/field.js');
-            Nova::style('nova-youtube-field', __DIR__.'/../dist/css/field.css');
+            Nova::script('nova-youtube-field', __DIR__ . '/../dist/js/field.js');
         });
     }
 

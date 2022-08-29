@@ -1,15 +1,9 @@
 let mix = require('laravel-mix')
 
+require('./nova.mix')
+
 mix
     .setPublicPath('dist')
     .js('resources/js/field.js', 'js')
     .vue({ version: 3 })
-    .vue({ version: 3 })
-    .webpackConfig({
-        externals: {
-            vue: 'Vue',
-        },
-        resolve: {
-            symlinks: false
-        }
-    });
+    .nova('media24si/nova-youtube-field')
